@@ -2,7 +2,7 @@
 
 **Autor: Lucas Locks**
 
-**Objetivo: Desenvolver o projeto 1 (Imposto) e o projeto 2 (Bar) utilizando Java.**
+**Objetivo: Desenvolver o projeto 1 (Imposto), projeto 2 (Bar), projeto 3 (Combate) e projeto 4 (Bichinho) utilizando Java.**
 
 **Descrição do Projeto 1 (Imposto)**
 
@@ -49,14 +49,39 @@
 
 - Resumo das Classes:
   Campeao: A classe Campeao representa um personagem no combate, com atributos de nome, vida, ataque e armadura. Possui métodos para:
+
   - Receber dano e calcular a redução de vida e armadura.
   - Verificar se o campeão está vivo.
   - Exibir o status atual do campeão (vida e armadura).
 
-Combate: A classe Combate gerencia a batalha entre dois campeões. Ela controla o número de turnos e a ordem dos ataques. A cada turno:
+  Combate: A classe Combate gerencia a batalha entre dois campeões. Ela controla o número de turnos e a ordem dos ataques. A cada turno:
 
-- campeao1 ataca primeiro, e só se campeao2 sobreviver, ele revida.
-- O combate termina quando um dos campeões morre, e o vencedor é declarado.
+  - campeao1 ataca primeiro, e só se campeao2 sobreviver, ele revida.
+  - O combate termina quando um dos campeões morre, e o vencedor é declarado.
 
-Main: A classe Main serve como ponto de entrada do programa, coletando os dados dos campeões e o número de turnos. Em seguida, inicia
-o combate e exibe o resultado final.
+  Main: A classe Main serve como ponto de entrada do programa, coletando os dados dos campeões e o número de turnos. Em seguida, inicia
+  o combate e exibe o resultado final.
+
+**Descrição do Projeto 4 (Bichinho)**
+
+- Criar um bichinho virtual com algumas características e que
+  possui um estado inicial. Depois que “nascer”, ele poderá executar quatro ações: comer, dormir,
+  correr e morrer. O jogo só termina quando o bichinho morrer, encerrando o programa.
+  Seja um conjunto de animais que possui as características comuns: nome, classe, família,
+  idade, estado (vivo = true e morto = false), caloria (0 a 100) e força (0 a 100). Estes animais podem fazer
+  as seguintes ações:
+
+  - nascer: perguntar os dados do animal (nome, classe e família). Ao nascer o animal recebe
+    10 de força e caloria, 0 (zero) na idade e true como estado;
+  - morrer: coloca 0 (zero) na força e false como estado; vida infinita pro bicho
+  - comer: caso o animal não esteja cheio e/ou morto, insere 10 no estado caloria e retira 2 de
+    força;
+  - correr: caso o animal não esteja morto ou exausto (caloria = 0), retira 5 do estado força e 5
+    do estado caloria;
+  - dormir: caso o animal não esteja morto, insere 10 no estado força e retira 2 do estado
+    caloria.
+
+- Resumo das Classes:
+  Animal: Contém os atributos e métodos do bichinho virtual. Define suas ações e verifica se ele está "vivo" antes de cada ação.
+
+  Jogo: Gerencia o ciclo do jogo, perguntando ao usuário o que o animal deve fazer até que o animal morra.
