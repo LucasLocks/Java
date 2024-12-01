@@ -2,7 +2,7 @@
 
 **Autor: Lucas Locks**
 
-**Objetivo: Desenvolver o projeto 1 (Imposto), projeto 2 (Bar), projeto 3 (Combate) e projeto 4 (Bichinho) utilizando Java.**
+**Objetivo: Desenvolver o projeto 1 (Imposto), projeto 2 (Bar), projeto 3 (Combate) , projeto 4 (Bichinho) e Avaliação 2 (Continentes e países)utilizando Java.**
 
 **Descrição do Projeto 1 (Imposto)**
 
@@ -85,3 +85,66 @@
   Animal: Contém os atributos e métodos do bichinho virtual. Define suas ações e verifica se ele está "vivo" antes de cada ação.
 
   Jogo: Gerencia o ciclo do jogo, perguntando ao usuário o que o animal deve fazer até que o animal morra.
+
+**Descrição da Avaliação 2 (Continentes e países)**
+
+- Escreva uma classe que represente um país. Um país é representado através dos atributos:
+  código ISO 3166-1 (ex.: BRA), nome (ex.: Brasil), população (ex.: 193.946.886) e a sua dimensão em
+  Km2 (ex.: 8.515.767,049). Além disso, cada país mantém uma lista de outros países com os quais ele
+  faz fronteira.
+
+- Escreva a classe em Java e forneça os seus membros a seguir:
+  a) Construtor que inicialize o código ISO, o nome e a dimensão do país;
+  b) Métodos de acesso (getter/setter) para as propriedades código ISO, nome, população e
+  dimensão do país;
+  c) Um método que permita verificar se dois objetos representam o mesmo país (igualdade
+  semântica). Dois países são iguais se tiverem o mesmo código ISO;
+  d) Um método que informe se outro país é limítrofe do país que recebeu a mensagem;
+  e) Um método que retorne a densidade populacional do país;
+  f) Um método que receba um país como parâmetro e retorne a lista de vizinhos comuns aos
+  dois países.
+- Considere que um país tem no máximo 40 outros países com os quais ele faz fronteira.
+
+- Escreva em Java uma classe Continente. Um continente possui um nome e é composto por
+  um conjunto de países. Forneça os membros de classe a seguir:
+  a) Construtor que inicialize o nome do continente;
+  b) Um método que permita adicionar países aos continentes;
+  c) Um método que retorne a dimensão total do continente;
+  d) Um método que retorne a população total do continente;
+  e) Um método que retorne a densidade populacional do continente;
+  f) Um método que retorne o país com maior população no continente;
+  g) Um método que retorne o país com menor população no continente;
+  h) Um método que retorne o país de maior dimensão territorial no continente;
+  i) Um método que retorne o país de menor dimensão territorial no continente;
+  j) Um método que retorne a razão territorial do maior país em relação ao menor país.
+
+  - Resumo das Classes:
+
+  1. Classe Pais
+     Função: Representa um país específico e seus atributos principais, como nome, população, área e vizinhos.
+
+  Responsabilidades:
+
+  - Armazenar dados básicos de um país (nome, população, área).
+  - Manter um conjunto de países vizinhos e permitir adições.
+  - Calcular a densidade populacional (população dividida pela área).
+  - Fornecer métodos para acessar e manipular as informações do país, como listar vizinhos e imprimir informações detalhadas.
+
+  2. Classe Continente
+     Função: Representa um continente e gerencia um conjunto de países que fazem parte dele.
+
+  Responsabilidades:
+
+  - Armazenar o nome do continente e a lista de países que o compõem.
+  - Calcular informações agregadas do continente, como a soma de áreas, populações e a densidade populacional média.
+  - Identificar o país de maior e menor população e de maior e menor área dentro do continente.
+  - Permitir a adição de países ao continente e retornar a lista de países presentes.
+
+  3. Classe Main
+     Função: Serve como ponto de entrada do programa, fornecendo a interface de menu para interação com o usuário e controlando o fluxo do programa.
+
+  Responsabilidades:
+
+  - Exibir um menu interativo para o usuário escolher diferentes opções (informações de continentes, densidade populacional de um país, razão territorial do maior e menor país, e vizinhos comuns entre dois países).
+  - Coletar a entrada do usuário e chamar os métodos apropriados nas classes Pais e Continente para executar as operações desejadas.
+  - Exibir os resultados das operações de forma formatada, como listas de países, densidades populacionais e comparações de áreas.
